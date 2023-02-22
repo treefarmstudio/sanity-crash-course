@@ -1,16 +1,18 @@
 ---
 import Layout from '../layouts/Page.astro';
 
-import { getFirstBlogPost } from '../lib/api';
+import { getFirstBlogPost, getSiteSettings } from '../lib/api';
 
-const firstPost = await getFirstBlogPost();
+const settings = await getSiteSettings();
+
+// const firstPost = await getFirstBlogPost();
 ---
 
 <Layout>
 	<main>
 		<h1>Welcome to <span class="text-gradient">Sanity + Astro Crash Course</span></h1>
 		<p>
-      {JSON.stringify(firstPost)}
+      {JSON.stringify(settings)}
     </p>
 	</main>
 </Layout>
