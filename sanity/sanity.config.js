@@ -12,9 +12,6 @@ export default defineConfig({
   dataset: "production",
 
   plugins: [
-    deskTool(
-      { structure },
-    ),
     visionTool(),
   ],
 
